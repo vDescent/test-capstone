@@ -29,9 +29,16 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+        <Stack.Screen name="index" options={{headerShown:false}}/>
+        <Stack.Screen name="(auth)" options={{headerShown:false}}/>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="notification" options={{ headerShown: false }} />
+        <Stack.Screen name="(news)" options={{ headerShown: false }} />
+        <Stack.Screen name="(ranking)" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );
 }
+
+{/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
+{/* <Stack.Screen name="+not-found" /> */}
